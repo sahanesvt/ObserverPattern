@@ -10,6 +10,14 @@ namespace ObserverPattern
     {
         static void Main(string[] args)
         {
+            var weatherData = new WeatherData();
+            var currentConditionDisplay = new CurrentConditionDisplay(weatherData);
+
+            weatherData.setMeasurements(93, 60, 20);
+            //currentConditionDisplay.unsubscribe(weatherData);
+            weatherData.notifyObserver();
+
+            Console.ReadLine();
         }
     }
 }
