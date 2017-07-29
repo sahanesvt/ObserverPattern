@@ -12,8 +12,12 @@ namespace ObserverPattern
         {
             var weatherData = new WeatherData();
             var currentConditionDisplay = new CurrentConditionDisplay(weatherData);
-
-            weatherData.setMeasurements(93, 60, 20);
+            var statisticsDisplay = new StatisticsDisplay(weatherData);
+            var forecastDisplay = new ForecastDisplay(weatherData);
+            var heatIndexDisplay = new HeatIndexDisplay(weatherData);
+            weatherData.setMeasurements(80, 65, 30.4f);
+            weatherData.setMeasurements(82, 70, 29.2f);
+            weatherData.setMeasurements(78, 90, 29.2f);
             //currentConditionDisplay.unsubscribe(weatherData);
 
             Console.ReadLine();
