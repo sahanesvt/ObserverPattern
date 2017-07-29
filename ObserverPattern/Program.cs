@@ -15,7 +15,6 @@ namespace ObserverPattern
 
             weatherData.setMeasurements(93, 60, 20);
             //currentConditionDisplay.unsubscribe(weatherData);
-            weatherData.notifyObserver();
 
             Console.ReadLine();
         }
